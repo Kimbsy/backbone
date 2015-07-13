@@ -60,6 +60,17 @@ app.configure(function() {
   app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 });
 
+/**
+ * API
+ * 
+ * url             HTTP Method  Operation
+ * /api/books      GET          Get an array of all books
+ * /api/books/:id  GET          Get the book with id of :id
+ * /api/books      POST         Add a new book and return the book with an id attribute added
+ * /api/books/:id  PUT          Update the book with id of :id
+ * /api/books/:id  DELETE       Delete the book with id of :id
+ */
+
 // get a list of all books
 app.get('/api/books', function(request, response) {
   return BookModel.find(function(err, books) {
