@@ -41,7 +41,7 @@ app.LibraryView = Backbone.View.extend({
 
     $('#addBook div').children('input').each(function(i, el) {
 
-      if ($(el).val() != '') {
+      if ($(el).val() !== '') {
 
         // for keywords, split them up
         if (el.id === 'keywords') {
