@@ -1,11 +1,11 @@
-var TodoMCV = new Backbone.Marionette.Application();
+var TodoMVC = new Backbone.Marionette.Application();
 
-TodoMCV.addRegions({
+TodoMVC.addRegions({
   header: '#header',
   main: '#main',
   footer: '#footer'
 });
 
-TodoMCV.on('start', function() {
+TodoMVC.on('start', function() {
   Backbone.history.start();
 });
